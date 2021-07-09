@@ -1,2 +1,2 @@
 # kit-beamer-example
-Example beamer presentation KIT style
+Example presentation made with LaTeX and beamer showing all basic elements

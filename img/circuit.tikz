@@ -1,0 +1,15 @@
+\begin{tikzpicture}
+\draw (0,0) to[full diode] (2,0) to [short] (4,0) to [C=\SI{47}{\nano\farad},-o] (6,0) node[anchor=north,yshift=-0.2cm] {$RF_\text{out}$};
+\draw (-6,0) node[anchor=north,yshift=-0.2cm] {$RF_\text{in}$} to [C=\SI{47}{\nano\farad},o-] (-4,0) to [short] (-2,0) to[full diode,invert] (0,0);
+\draw (0,3) node[anchor=west] {$V_\text{control}$} to [short,o-] (0,2) to [R=\SI{330}{\ohm},-*] (0,0);
+\draw (0,2) to [C=\SI{47}{\nano\farad}] ++(-2,0) node[rground,rotate=-90] {};
+
+\draw (-4,0) to [short,*-] (-4,-2) to [R=\SI{560}{\ohm}] (-4,-4) node[rground] {};
+\draw (-2,0) to [full diode,*-] (-2,-2) to [C=\SI{47}{\nano\farad}] (-2,-4) node[rground] {};
+
+\draw (-2,-2) to [R=\SI{1.640}{\kilo\ohm},*-] (0,-2) to [R=\SI{1.640}{\kilo\ohm},-*] (2,-2);
+\draw (0,-2) to [R=\SI{680}{\ohm},*-] (0,-4) to [short,-o] (0,-6) node[anchor=west] {$V_+$};
+
+\draw (4,0) to [short,*-] (4,-2) to [R=\SI{560}{\ohm}] (4,-4) node[rground] {};
+\draw (2,0) to [full diode,*-] (2,-2) to [C=\SI{47}{\nano\farad}] (2,-4) node[rground] {};
+\end{tikzpicture}

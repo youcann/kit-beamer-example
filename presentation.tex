@@ -1,0 +1,150 @@
+\documentclass[en,navbaroff]{sdqbeamer} %compiles with lualatex
+\titleimage{banner}
+\groupname{IHM \& IBPT}
+\grouplogo{grouplogo} %add additional logo in the cls file
+\title[Master Thesis]{Analysis of the Development Process for the Analytical Development of Processes-Studies}
+\subtitle{Presentation at the 3\textsuperscript{rd} International Presentation Summit} 
+\author[Antonio B. McDoucheroy]{B.Sc. Antonio Bertram McDoucheroy}
+\date[\today]{\today}
+
+%Literatur 
+\usepackage[citestyle=authoryear,bibstyle=numeric,hyperref,backend=biber]{biblatex}
+\addbibresource{lit.bib}
+\bibhang1em
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{booktabs}
+\usepackage{siunitx}
+\usepackage{graphicx}
+\sisetup{range-phrase=...}
+\usepackage{tikz}
+\usetikzlibrary{external}
+\tikzexternalize[optimize=false,prefix=tikz/]
+\usepackage{tikzscale}
+\usepackage{pgfgantt}
+\usepackage{soul}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepackage{tikzscale}
+\usepackage[european]{circuitikz}
+\usepackage{animate}
+\usepgfplotslibrary{fillbetween}
+\usepgfplotslibrary{groupplots}
+
+
+
+\begin{document}
+\KITtitleframe
+\begin{frame}[t]{Agenda}
+\tableofcontents[hideallsubsections]
+\end{frame}
+
+\section{Introduction}
+
+\section{Motivation And Objective}
+\begin{frame}[t]{Motivation and Objectives}
+\begin{columns}[T]
+	\begin{column}{0.5\linewidth}
+		\textbf{Graphical graphic}
+		\begin{figure}
+		\includegraphics[width=\textwidth]{example-image-a}
+		\end{figure}
+	\end{column}
+	\begin{column}{0.5\linewidth}
+		\textbf{Itemized Text}
+		\begin{itemize}
+		\item<1-> Interesting point A
+		\item<2-> Interesting point B
+		\begin{equation*}
+		\sqrt{z-1}=7 \cdot \log_3 \left\{\sin 4.02\right\}
+		\end{equation*}
+		\end{itemize}
+	\end{column}
+\end{columns}
+\end{frame}
+
+\section{Main Stuff}
+\begin{frame}[t]{A Nice Plot}
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth,height=0.25\textwidth]{img/pgfplots.tikz}
+\caption{Data came to my mind when i dreamed of \cite{journals/bstj/Shannon48}}
+\end{figure}
+\begin{itemize}
+\item Tikz/PGFplot scaled with \texttt{tikzscale} in \texttt{\textbackslash includegraphics} options
+\item Using tikz library \texttt{external} to pre-compile for speed
+\end{itemize}
+\end{frame}
+
+\begin{frame}[t]{A Nice Block Diagram}
+\only<1>{
+\begin{figure}
+\centering
+\includegraphics[]{img/tikzBlockDiagram/tikzBlockDiagram1.tikz}
+\end{figure}
+}
+\only<2>{
+\begin{figure}
+\centering
+\includegraphics[]{img/tikzBlockDiagram/tikzBlockDiagram2.tikz}
+\end{figure}
+}
+\end{frame}
+
+\begin{frame}[t]{Next Level Circuit}
+\begin{figure}
+\centering
+\resizebox{!}{0.35\linewidth}{\includegraphics[]{img/circuit.tikz}}
+\caption{Shrink \texttt{tikzpicture} (with text and everything) to usable size}
+\end{figure}
+\end{frame}
+
+\section{Results}
+\begin{frame}[t]{The Awesome Results}
+\begin{figure}
+\centering
+\includegraphics[]{img/barplot.tikz}
+\end{figure}
+\end{frame}
+
+
+\section{Conclusion And Outlook}
+\begin{frame}[t]{Conclusion}
+\begin{itemize}
+\item The key to burning an ex-wife effigy is to dip it in paraffin wax and then toss the flaming bottle of isopropyl alcohol from a safe distance
+\item Do not stand too close when you light an ex-wife effigy
+\end{itemize}
+\only<2>{
+\begin{figure}
+\centering
+\includegraphics[width=0.5\linewidth]{img/ron.jpg}
+\end{figure}
+}
+\end{frame}
+
+\begin{frame}[t]{Outlook}
+\begin{itemize}
+\item Everything's done.
+\item No further research needed
+\end{itemize}
+\end{frame}
+
+\appendix
+\beginbackup
+\begin{frame}[t]{Sources}
+\printbibliography
+\end{frame}
+
+\begin{frame}[t]{Backup (1)}
+\begin{itemize}
+\item May help if someone asks
+\end{itemize}
+\end{frame}
+
+\backupend
+
+
+
+\end{document}
